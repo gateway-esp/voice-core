@@ -12,3 +12,6 @@ cc -std=c11 -Wall -Wextra -Werror -fsanitize=address,undefined \
   -I"$root/include" -I"$json" "$root/tests/voice_mcp_json_test.c" \
   "$root/voice_core.c" "$root/voice_mcp_json.c" "$json/cJSON.c" -o "$build/voice_mcp_json_test"
 "$build/voice_mcp_json_test"
+cc -std=c11 -Wall -Wextra -Werror -fsanitize=address,undefined \
+  -I"$root/include" "$root/tests/voice_vad_test.c" "$root/voice_vad.c" -o "$build/voice_vad_test"
+"$build/voice_vad_test"
